@@ -31,7 +31,7 @@ class Nav extends Component {
 
                 <Tabs
                     forceRenderTabPanel={true}
-                    defaultIndex={3}
+                    defaultIndex={0}
                     style={{ textAlign: "center"}}
                 >
                     <TabList>
@@ -48,15 +48,7 @@ class Nav extends Component {
 
                     <TabPanel forceRender={true}
                     >
-                        <Iframe
-                            display="block"
-                            url="http://127.0.0.1:57535/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/overview?namespace=default"
-                            height="100%"
-                            width="100%"
-                        />
-                    </TabPanel>
-                    <TabPanel forceRender={true}
-                    >
+                        <h2 style={{textAlign: "center"}}>You can use the form below to set a URL, try running the kubernetes dashboard and pasting it here.</h2>
                         <form onSubmit={this.handleSubmit}>
                             <label>
                                 Enter URL:
@@ -70,6 +62,15 @@ class Nav extends Component {
                             height="100%"
                             width="100%"
 
+                        />
+                    </TabPanel>
+                    <TabPanel forceRender={true}
+                    >
+                        <Iframe
+                            display="block"
+                            url="http://127.0.0.1:57535/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/overview?namespace=default"
+                            height="100%"
+                            width="100%"
                         />
                     </TabPanel>
                     <TabPanel forceRender={true}
